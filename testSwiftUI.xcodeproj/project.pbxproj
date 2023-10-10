@@ -14,6 +14,8 @@
 		D4AF65502AD5C397000C2BFA /* testSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF654F2AD5C397000C2BFA /* testSwiftUITests.swift */; };
 		D4AF655A2AD5C397000C2BFA /* testSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF65592AD5C397000C2BFA /* testSwiftUIUITests.swift */; };
 		D4AF655C2AD5C397000C2BFA /* testSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF655B2AD5C397000C2BFA /* testSwiftUIUITestsLaunchTests.swift */; };
+		D4AF65692AD5C3BB000C2BFA /* VoidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF65682AD5C3BB000C2BFA /* VoidModel.swift */; };
+		D4AF656C2AD5C668000C2BFA /* StripeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = D4AF656B2AD5C668000C2BFA /* StripeIdentity */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		D4AF65552AD5C397000C2BFA /* testSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4AF65592AD5C397000C2BFA /* testSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testSwiftUIUITests.swift; sourceTree = "<group>"; };
 		D4AF655B2AD5C397000C2BFA /* testSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D4AF65682AD5C3BB000C2BFA /* VoidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4AF656C2AD5C668000C2BFA /* StripeIdentity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +102,7 @@
 				D4AF65402AD5C395000C2BFA /* ContentView.swift */,
 				D4AF65422AD5C397000C2BFA /* Assets.xcassets */,
 				D4AF65442AD5C397000C2BFA /* Preview Content */,
+				D4AF65682AD5C3BB000C2BFA /* VoidModel.swift */,
 			);
 			path = testSwiftUI;
 			sourceTree = "<group>";
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = testSwiftUI;
+			packageProductDependencies = (
+				D4AF656B2AD5C668000C2BFA /* StripeIdentity */,
+			);
 			productName = testSwiftUI;
 			productReference = D4AF653B2AD5C395000C2BFA /* testSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = D4AF65322AD5C395000C2BFA;
+			packageReferences = (
+				D4AF656A2AD5C460000C2BFA /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
+			);
 			productRefGroup = D4AF653C2AD5C395000C2BFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4AF65692AD5C3BB000C2BFA /* VoidModel.swift in Sources */,
 				D4AF65412AD5C395000C2BFA /* ContentView.swift in Sources */,
 				D4AF653F2AD5C395000C2BFA /* testSwiftUIApp.swift in Sources */,
 			);
@@ -582,6 +594,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4AF656A2AD5C460000C2BFA /* XCRemoteSwiftPackageReference "stripe-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.17.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4AF656B2AD5C668000C2BFA /* StripeIdentity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4AF656A2AD5C460000C2BFA /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeIdentity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4AF65332AD5C395000C2BFA /* Project object */;
 }
